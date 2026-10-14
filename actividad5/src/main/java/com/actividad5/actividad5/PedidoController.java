@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PedidoController {
     @PostMapping("/pedido")
-    public Respuesta recibirPedido(@RequestBody Pedido pedido) {
-
+    public void recibirPedido(@RequestBody Pedido pedido) {
+        
     }
+
 }
