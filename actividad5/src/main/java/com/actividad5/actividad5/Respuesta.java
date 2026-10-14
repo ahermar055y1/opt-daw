@@ -6,7 +6,7 @@ public class Respuesta {
 
     private String cliente;
     private int totalProductos;
-    private BigDecimal precioTotal;
+    private Double precioTotal;
     private String mensaje;
 
     public Respuesta(String cliente, int totalProductos, double precioTotal, String mensaje) {
