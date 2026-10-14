@@ -24,7 +24,7 @@ public class Respuesta {
         return totalProductos;
     }
 
-    public BigDecimal getPrecioTotal() {
+    public Double getPrecioTotal() {
         return precioTotal;
     }
 
