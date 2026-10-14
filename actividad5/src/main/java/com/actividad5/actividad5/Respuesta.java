@@ -9,7 +9,7 @@ public class Respuesta {
     private BigDecimal precioTotal;
     private String mensaje;
 
-    public Respuesta(String cliente, int totalProductos, BigDecimal precioTotal, String mensaje) {
+    public Respuesta(String cliente, int totalProductos, double precioTotal, String mensaje) {
         this.cliente = cliente;
         this.totalProductos = totalProductos;
         this.precioTotal = precioTotal;

@@ -1,12 +1,10 @@
 package com.actividad5.actividad5;
 
-import java.math.BigDecimal;
-
 public class Producto {
 
     private String nombre;
-    private int cantidad;
-    private BigDecimal precioUnitario;
+    private Integer cantidad;
+    private Double precioUnitario;
 
     public Producto() {
     }
@@ -19,7 +17,7 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public int getCantidad() {
+    public Integer getCantidad() {
         return cantidad;
     }
 
@@ -27,11 +25,11 @@ public class Producto {
         this.cantidad = cantidad;
     }
 
-    public BigDecimal getPrecioUnitario() {
+    public Double getPrecioUnitario() {
         return precioUnitario;
     }
 
-    public void setPrecioUnitario(BigDecimal precioUnitario) {
+    public void setPrecioUnitario(Double precioUnitario) {
         this.precioUnitario = precioUnitario;
     }
 }

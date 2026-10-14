@@ -1,5 +1,6 @@
-package com.actividad5.actividad5;
+package com.actividad5.actividad5.controllers;
 
+import com.actividad5.actividad5.Formulario;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
