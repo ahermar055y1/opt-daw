@@ -1,0 +1,24 @@
+package com.actividad5.actividad5;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class FormularioController {
+
+    @GetMapping("/formulario")
+    public String mostrarFormulario() {
+        return "formulario";
+    }
+
+    @PostMapping("/procesar")
+    @ResponseBody
+    public String procesarFormulario(@ModelAttribute Formulario formulario) {
+
+        return "Formulario recibido. Nombre: " + formulario.getNombre()
+                + ", edad: " + formulario.getEdad();
+    }
+}
