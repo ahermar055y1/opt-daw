@@ -1,6 +1,7 @@
 package com.actividad6.actividad6.controller;
 
 import com.actividad6.actividad6.Formulario;
+import com.actividad6.actividad6.Login;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -59,5 +60,25 @@ public class FormularioController {
         }
 
         return respuesta;
+    }
+    @GetMapping("/login")
+    public String mostrarLogin(){
+        return"inicio";
+    }
+    @PostMapping
+    @ResponseBody
+    public String procesarLogin (@ModelAttribute Login login){
+        String correo= login.getCorreo();
+        String contraseña= login.getContraseña();
+
+        String contraseñaMap= usuarios.get(correo);
+        if(!usuarios.containsKey(correo)){
+            return "Error el usuario no existe";
+        }
+
+        if(!contraseña.equals(contraseñaMap)){
+            return "La contraseña es incorrecta";
+        }
+        return "Inicio de sesión completado";
     }
 }
